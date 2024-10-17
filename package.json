@@ -1,5 +1,5 @@
 {
-  "name": "newsMobile",
+  "name": "news-mobile",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,9 +7,11 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "ios:simulator": "npm run ios -- --simulator='iPhone 16 Plus (5931A724-F85E-4069-B2F4-B0107A5D3F4A)'"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "react": "18.3.1",
     "react-native": "0.75.4"
   },
