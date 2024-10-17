@@ -1,0 +1,11 @@
+import { API_KEY } from "@env";
+import axios from "axios";
+
+export const newsApi = axios.create({
+    baseURL: 'https://newsapi.org/v2',
+    params: {
+        q: 'Alien',
+        apiKey: API_KEY,
+        language: 'es',
+    }
+})
