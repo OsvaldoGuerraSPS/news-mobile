@@ -8,7 +8,7 @@ export const MySafeArea = ({ children }: PropsWithChildren) => {
 
     return (
         <View 
-            style={{flex: 1, paddingTop: top, padding: 10}}>
+            style={{flex: 1, paddingTop: top+10, padding: 10}}>
             { children }
         </View>
     )

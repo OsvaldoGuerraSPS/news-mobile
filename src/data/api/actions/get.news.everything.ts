@@ -9,7 +9,6 @@ export const getNewsEverything = async (): Promise<News[]> => {
         const news = data.articles.map((article: Article) => {
             return NewsMapper.newsApiToNewsModel(article)
         })
-        console.log(news[0].title)
         return news;
     } catch (error) {
         console.log(error)

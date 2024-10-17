@@ -13,7 +13,7 @@ export const InfoView = ({ title, description }: Props) => {
                 { title }
             </Text>
             <Text style={ styles.newsDescription }>
-                { description }
+                { description.substring(0, 120).replaceAll('\n', ' ') }
             </Text>
         </View>
     )
