@@ -1,10 +1,12 @@
-import { SafeAreaProvider } from "react-native-safe-area-context"
-import { HomeScreen } from "./presentation/screens/home/HomeScreen"
+import './presentation/navigator/gesture-handler';
+import { NavigationContainer } from "@react-navigation/native";
+import { StackNavigator } from "./presentation/navigator/StackNavigator";
+import { MySafeArea } from './presentation/components/ui/MySafeArea';
 
 export const App = () => {
   return (
-    <SafeAreaProvider>
-      <HomeScreen/>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <StackNavigator/>
+    </NavigationContainer>
   )
 }

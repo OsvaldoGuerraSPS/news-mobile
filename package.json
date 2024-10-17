@@ -11,11 +11,15 @@
     "ios:simulator": "npm run ios -- --simulator='iPhone 16 Plus (5931A724-F85E-4069-B2F4-B0107A5D3F4A)'"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/stack": "^6.4.1",
     "axios": "^1.7.7",
     "react": "18.3.1",
     "react-native": "0.75.4",
     "react-native-dotenv": "^3.4.11",
-    "react-native-safe-area-context": "^4.11.1"
+    "react-native-gesture-handler": "^2.20.0",
+    "react-native-safe-area-context": "^4.11.1",
+    "react-native-screens": "^3.34.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
