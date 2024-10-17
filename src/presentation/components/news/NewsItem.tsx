@@ -1,15 +1,20 @@
-import { StyleSheet, Text, View } from "react-native"
+import { Pressable, StyleSheet, Text, View } from "react-native"
 import { News } from "../../../domain/model/news"
 import { FadeInImage } from "../ui/FadeInImage"
 import { newsStyles } from "./newsStyles"
 import { InfoView} from "./InfoView"
 import { Divider } from "../ui/Divider"
+import { NavigationProp, useNavigation } from "@react-navigation/native"
+import { RootStackParams } from "../../navigator/StackNavigator"
 
 interface Props {
     news: News
 }
 
 export const NewsItem = ({ news }: Props) => {
+
+    const navigation = useNavigation<NavigationProp<RootStackParams>>();
+
     return (
         <View style={newsStyles.container}>
             <View style={newsStyles.image}>
@@ -19,9 +24,11 @@ export const NewsItem = ({ news }: Props) => {
             <View style={newsStyles.infoView}>
                 <InfoView title={news.title} description={news.description}/>
                 <Divider height={ 1 } width={ '100%'} color="gray"/>
-                <View style={ styles.seeMoreContainer }>
+                <Pressable 
+                    onPress={() => navigation.navigate('DetailScreen', { news: news })}
+                    style={ styles.seeMoreContainer }>
                     <Text style={ styles.seeMore }>Ver más</Text>
-                </View>
+                </Pressable>
             </View>
         </View>
     )
